@@ -18,24 +18,16 @@ function CTA() {
 
         <div className="cta-actions">
 
-          {/* BOOK A SESSION → GOOGLE FORM */}
+          {/* CONTACT US → WHATSAPP */}
           <a 
-            href="https://forms.gle/55K5pBFUP5pSNapi7"
-            target="_blank" 
+            href="https://wa.me/6285353233216?text=Hello%20Elevea,%20I%20would%20like%20to%20schedule%20a%20consultation."
+            target="_blank"
             rel="noopener noreferrer"
             className="btn"
           >
-            BOOK A SESSION
+            BOOK CONSULTATION
           </a>
-{/* CONTACT US → WHATSAPP */}
-<a 
-  href="https://wa.me/6285353233216?text=Hello%20Elevea,%20I%20would%20like%20to%20schedule%20a%20consultation."
-  target="_blank"
-  rel="noopener noreferrer"
-  className="btn"
->
-  BOOK CONSULTATION
-</a>
+
         </div>
 
       </div>
