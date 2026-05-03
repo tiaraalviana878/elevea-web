@@ -1,6 +1,5 @@
 import Hero from "../components/Hero";
 import Challenge from "../components/Challenge";
-import Approach from "../components/Approach";
 import Services from "../components/Services";
 import Insights from "../components/Insights";
 import CTA from "../components/CTA";
