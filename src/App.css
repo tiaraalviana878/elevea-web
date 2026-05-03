@@ -91,7 +91,38 @@ a {
 .nav-links a:hover::after {
   width: 100%;
 }
+.nav-links button {
+  background: none;
+  border: none;
+  margin-left: 40px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+  position: relative;
+  padding-bottom: 6px;
+  cursor: pointer;
+  font-family: inherit;
+}
 
+/* underline animation sama kayak <a> */
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transition: width 0.35s ease;
+}
+
+.nav-links button:hover {
+  color: var(--gold);
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
 /* =====================
    SECTION
 ===================== */

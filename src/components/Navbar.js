@@ -25,22 +25,22 @@ function Navbar() {
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
 
-          {/* INI SEKARANG BUKAN BUTTON */}
-          <a onClick={() => goToHomeSection("services")}>
+          {/* FIX: button instead of <a> */}
+          <button onClick={() => goToHomeSection("services")}>
             Services
-          </a>
+          </button>
 
-          <a onClick={() => goToHomeSection("insights")}>
+          <button onClick={() => goToHomeSection("insights")}>
             Insights
-          </a>
+          </button>
 
-          <a 
-  href="https://docs.google.com/forms/d/e/1FAIpQLScOXFycD61llaxt4sWHQT68GxSsTyZ9oQkkgGvoTFjqz57ZBQ/viewform"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Contact
-</a>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScOXFycD61llaxt4sWHQT68GxSsTyZ9oQkkgGvoTFjqz57ZBQ/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact
+          </a>
 
         </div>
 
