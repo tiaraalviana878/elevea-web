@@ -1,7 +1,7 @@
 :root {
-  --navy: #081426;        /* deep base */
-  --navy-soft: #0D1F3A;   /* section */
-  --navy-card: #0F2342;   /* card */
+  --navy: #081426;
+  --navy-soft: #0D1F3A;
+  --navy-card: #0F2342;
 
   --gold: #C9A45C;
   --white: #FFFFFF;
@@ -15,6 +15,7 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -64,47 +65,21 @@ a {
   object-fit: contain;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-links button {
   margin-left: 40px;
   font-size: 12px;
   letter-spacing: 1.5px;
   color: var(--gray);
-  position: relative;
-  padding-bottom: 6px;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  transition: width 0.35s ease;
-}
-
-.nav-links a:hover {
-  color: var(--gold);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-.nav-links button {
   background: none;
   border: none;
-  margin-left: 40px;
-  font-size: 12px;
-  letter-spacing: 1.5px;
-  color: var(--gray);
+  cursor: pointer;
   position: relative;
   padding-bottom: 6px;
-  cursor: pointer;
   font-family: inherit;
 }
 
-/* underline animation sama kayak <a> */
+.nav-links a::after,
 .nav-links button::after {
   content: "";
   position: absolute;
@@ -116,13 +91,16 @@ a {
   transition: width 0.35s ease;
 }
 
+.nav-links a:hover,
 .nav-links button:hover {
   color: var(--gold);
 }
 
+.nav-links a:hover::after,
 .nav-links button:hover::after {
   width: 100%;
 }
+
 /* =====================
    SECTION
 ===================== */
@@ -209,8 +187,6 @@ a {
    BUTTON
 ===================== */
 .btn {
-  position: relative;
-  z-index: 10;
   transition: all 0.3s ease;
 }
 
@@ -249,14 +225,12 @@ a {
   padding-top: 180px;
 }
 
-
 /* =====================
-   RESPONSIVE TABLET
+   TABLET
 ===================== */
 @media (max-width: 900px) {
 
   .hero {
-    height: auto;
     padding: 120px 20px 80px;
   }
 
@@ -268,6 +242,7 @@ a {
   .hero-right {
     height: 260px;
     margin-top: 40px;
+    width: 100%;
   }
 
   .hero h1 {
@@ -280,48 +255,82 @@ a {
 }
 
 /* =====================
-   RESPONSIVE MOBILE (FIX UTAMA)
+   MOBILE FINAL FIX
 ===================== */
 @media (max-width: 768px) {
 
-  /* container biar gak kepotong */
   .container {
     padding: 0 16px;
   }
 
-  /* grid jadi 1 kolom */
-  .grid-3 {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  h1 {
+    font-size: 32px !important;
   }
 
-  /* pillars juga 1 kolom */
+  h2 {
+    font-size: 24px !important;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .grid-3,
   .pillars-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* CTA button jadi vertikal */
+  .hero {
+    padding: 100px 16px 60px;
+  }
+
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
   .cta-actions {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
     gap: 12px;
+    align-items: center;
   }
 
-  /* judul lebih kecil */
-  .title {
-    font-size: 28px;
+  .cta-actions .btn {
+    width: 100%;
+    text-align: center;
   }
 
-  /* navbar supaya gak tabrakan */
+  .card {
+    padding: 24px;
+  }
+
+  .section {
+    padding: 80px 16px;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
   .nav-links a,
   .nav-links button {
-    margin-left: 12px;
+    margin-left: 0;
     font-size: 11px;
   }
 
-  /* logo navbar lebih kecil */
   .nav-logo {
     height: 60px;
   }
