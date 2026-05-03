@@ -1,0 +1,45 @@
+.promise {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+/* subtle divider */
+.promise::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* label kecil */
+.promise-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+/* main text */
+.promise-text {
+  font-size: 36px;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* highlight effect */
+.promise-text span {
+  color: var(--gold);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .promise-text {
+    font-size: 26px;
+  }
+}

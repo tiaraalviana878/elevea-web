@@ -1,0 +1,94 @@
+.vision-mission {
+  background: #0b1220;
+  padding: 140px 80px;
+  color: #fff;
+}
+
+/* TITLE */
+.vm-title {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 90px;
+}
+
+/* LAYOUT */
+.vm-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+/* CHART */
+.vm-chart {
+  width: 340px;
+  height: 240px;
+}
+
+/* 🔥 MAIN GROWTH ANIMATION */
+.growth-line {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+
+  animation: drawUp 2.2s ease-out forwards,
+             glow 2.5s infinite ease-in-out;
+}
+
+/* DRAW FROM BOTTOM → TOP */
+@keyframes drawUp {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* LIVE GLOW (TRADING FEEL) */
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(201,164,92,0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(201,164,92,0.8));
+  }
+}
+
+/* RIGHT SIDE */
+.vm-content {
+  max-width: 600px;
+}
+
+.vm-block h3 {
+  color: #c9a45c;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.vm-block p {
+  color: #d6d6d6;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* divider */
+.vm-divider {
+  height: 1px;
+  margin: 40px 0;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201,164,92,0.7),
+    transparent
+  );
+}
+
+/* hover subtle only */
+.vm-chart:hover {
+  transform: scale(1.02);
+  transition: 0.3s ease;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .vm-layout {
+    flex-direction: column;
+  }
+}

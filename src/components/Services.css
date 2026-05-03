@@ -1,0 +1,73 @@
+.services {
+  background: #0b1220;
+  text-align: center;
+}
+
+/* SUBTITLE */
+.services-sub {
+  color: #b3b3b3;
+  max-width: 620px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  background: rgba(255,255,255,0.03);
+  padding: 36px;
+  border-radius: 16px;
+  text-align: left;
+
+  /* 🔥 GOLD BORDER ALWAYS ON */
+  border: 1px solid rgba(201,164,92,0.5);
+
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* ICON */
+.service-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  background: rgba(201,164,92,0.1);
+  color: #c9a45c;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.service-card h3 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+/* TEXT */
+.service-card p {
+  color: #b3b3b3;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ❌ REMOVE HOVER ANIMATION (NO MOVE) */
+.service-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  border: 1px solid rgba(201,164,92,0.7);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,72 @@
+.challenge {
+  background: #0b1220;
+  padding: 140px 80px;
+  color: #fff;
+}
+
+/* TITLE */
+.challenge-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.challenge-sub {
+  max-width: 750px;
+  margin: 0 auto 80px;
+  text-align: center;
+  color: #b3b3b3;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ITEM */
+.challenge-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 0 30px;
+  border-right: 1px solid rgba(201,164,92,0.5);
+}
+
+/* HAPUS BORDER DI ITEM TERAKHIR */
+.challenge-item.no-border {
+  border-right: none;
+}
+
+/* ICON */
+.icon {
+  color: #c9a45c;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* TEXT */
+.text h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.text p {
+  font-size: 14px;
+  color: #b3b3b3;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .challenge-item {
+    border-right: none;
+    padding: 20px 0;
+  }
+}

@@ -1,0 +1,59 @@
+.core {
+  background: var(--black-soft);
+}
+
+.core-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.core-card {
+  background: var(--black-card);
+  padding: 40px;
+  border-radius: 14px;
+  position: relative;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* GOLD LINE */
+.core-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s ease;
+}
+
+.core-card:hover::before {
+  transform: scaleY(1);
+}
+
+.core-card:hover {
+  transform: translateY(-8px);
+}
+
+.core-card h3 {
+  margin-bottom: 12px;
+}
+
+.core-card p {
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.core-card button {
+  background: none;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 1px;
+}

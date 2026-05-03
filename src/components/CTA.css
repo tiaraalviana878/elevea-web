@@ -1,0 +1,53 @@
+.cta {
+  padding: 140px 0;
+  text-align: center;
+  position: relative;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+.cta-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-size: 36px;
+  max-width: 720px;
+  margin: 0 auto 20px;
+  line-height: 1.4;
+}
+
+.cta-desc {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+  }
+}

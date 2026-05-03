@@ -1,0 +1,65 @@
+.serve {
+  background: #0b1220;
+  text-align: center;
+  padding: 120px 80px;
+}
+
+/* TITLE */
+.serve-title {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* SUB */
+.serve-sub {
+  color: #b3b3b3;
+  max-width: 650px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+/* 🔥 INI KUNCI HORIZONTAL */
+.serve-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap; /* biar gak rusak di mobile */
+}
+
+/* ITEM */
+.serve-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(201,164,92,0.25);
+
+  white-space: nowrap;
+  transition: 0.3s ease;
+}
+
+/* ICON */
+.serve-item svg {
+  color: #c9a45c;
+}
+
+/* TEXT */
+.serve-item span {
+  color: #e6e6e6;
+  font-size: 14px;
+}
+
+/* HOVER */
+.serve-item:hover {
+  transform: translateY(-2px);
+  border-bottom: 1px solid rgba(201,164,92,0.7);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .serve-line {
+    flex-direction: column;
+  }
+}

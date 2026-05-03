@@ -1,0 +1,114 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 60px;
+}
+
+/* OVERLAY NAVY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(5, 15, 30, 0.95) 30%,
+    rgba(5, 15, 30, 0.7) 60%,
+    rgba(5, 15, 30, 0.3) 100%
+  );
+
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* BIG LETTER E */
+.hero::after {
+  content: "E";
+  position: absolute;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 420px;
+  font-weight: 600;
+
+  right: 8%;
+  bottom: -40px;
+
+  color: rgba(255, 255, 255, 0.05);
+
+  z-index: 1;
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin-left: 60px;
+}
+
+/* TEXT */
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #d4af37, #b08d57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  margin-top: 24px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* BUTTON */
+.hero-buttons {
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 14px 32px;
+  background: var(--gold);
+  color: black;
+  border: none;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  margin-left: 14px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    padding-left: 20px;
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero::after {
+    font-size: 200px;
+    right: 0;
+    bottom: 0;
+  }
+}

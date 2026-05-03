@@ -1,0 +1,107 @@
+/* SECTION */
+.insights {
+  background: var(--black);
+}
+
+/* TITLE */
+.insight-title {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+
+  font-family: 'Playfair Display', serif;
+
+  background: linear-gradient(90deg, #dad7d3, #d6c99e, #f5e6a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* GRID */
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.insight-card {
+  background: var(--black-card);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* GOLD ACCENT LINE */
+.insight-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--gold);
+
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.insight-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(201,164,92,0.4);
+}
+
+.insight-card:hover::before {
+  transform: scaleY(1);
+}
+
+/* META (kecil atas) */
+.insight-meta {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.insight-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+.insight-card p {
+  color: var(--gray);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* READ MORE */
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* underline anim */
+.read-more::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: var(--gold);
+  transition: 0.3s;
+  margin-top: 4px;
+}
+
+.read-more:hover::after {
+  width: 100%;
+}

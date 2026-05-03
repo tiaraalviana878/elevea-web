@@ -1,0 +1,69 @@
+.trust {
+  padding: 120px 0;
+  text-align: center;
+  position: relative;
+}
+
+/* garis halus biar ga kosong */
+.trust::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 15%;
+  height: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* label kecil */
+.trust-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* title */
+.trust-title {
+  font-size: 34px;
+  max-width: 720px;
+  margin: 0 auto 60px;
+  line-height: 1.4;
+}
+
+/* stats layout */
+.trust-stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* angka */
+.trust-item h3 {
+  font-size: 36px;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+/* label */
+.trust-item p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* hover subtle */
+.trust-item {
+  transition: 0.3s;
+}
+
+.trust-item:hover {
+  transform: translateY(-4px);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .trust-stats {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

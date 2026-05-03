@@ -1,0 +1,52 @@
+.values {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.02));
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* TITLE */
+.values-title {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ITEM */
+.value-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  color: var(--white); /* ❗ langsung terang, bukan gray */
+}
+
+/* ICON */
+.value-item svg {
+  color: var(--gold);
+}
+
+/* ❌ HAPUS HOVER EFFECT TOTAL */
+.value-item:hover {
+  transform: none;
+  color: var(--white);
+}
+
+/* OPTIONAL: subtle glow biar hidup tapi tetap static */
+.value-item.active {
+  text-shadow: 0 0 10px rgba(201,164,92,0.15);
+  opacity: 1;
+}
