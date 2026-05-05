@@ -7,7 +7,7 @@ function Hero() {
       className="hero"
       style={{
         backgroundImage: `url(${heroImg})`,
-        backgroundPosition: "calc(100% + 120px) center",
+        backgroundPosition: "70% center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
