@@ -53,6 +53,16 @@ function About() {
             </p>
           </div>
 
+          {/* MISSION */}
+          <div className="about-block">
+            <h4>Mission</h4>
+            <p>
+              We exist to elevate people and organizations by unlocking their full potential
+              and building future-ready capabilities through business transformation,
+              human capital strategy, and leadership development.
+            </p>
+          </div>
+
           {/* VALUES */}
           <div className="about-block">
             <h4>Values</h4>
@@ -83,22 +93,6 @@ function About() {
                 <p>We measure success by meaningful and lasting results.</p>
               </div>
             </div>
-          </div>
-
-          {/* 🔥 BUTTON (INI YANG KURANG TADI) */}
-          <div className="about-buttons">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScOXFycD61llaxt4sWHQT68GxSsTyZ9oQkkgGvoTFjqz57ZBQ/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
-              WORK WITH US
-            </a>
-
-            <a href="#services" className="btn btn-outline">
-              EXPLORE SERVICES
-            </a>
           </div>
 
         </div>

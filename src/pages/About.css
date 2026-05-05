@@ -1,49 +1,138 @@
+/* =====================
+   ABOUT SECTION
+===================== */
 .about {
-  padding: 140px 0;
-  background: #0b1220;
+  padding: 160px 0;
+  background: radial-gradient(circle at top, #0f172a 0%, #0b1220 60%);
+  position: relative;
 }
 
+/* subtle overlay biar depth */
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+/* =====================
+   GRID
+===================== */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
-  gap: 100px;
+  gap: 120px;
   align-items: center;
 }
 
-/* LEFT VISUAL */
+/* =====================
+   LEFT VISUAL
+===================== */
 .about-left {
   position: relative;
-  height: 400px;
+  height: 420px;
 }
 
 .about-left::before {
   content: "E";
   position: absolute;
-  font-size: 300px;
-  color: rgba(255,255,255,0.04);
+  font-size: 320px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.03);
+  letter-spacing: -10px;
 }
 
-/* RIGHT */
+/* =====================
+   RIGHT CONTENT
+===================== */
 .about-title {
-  font-size: 44px;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
+.about-title span {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* elegant line */
 .about-line {
   width: 60px;
   height: 2px;
-  background: var(--gold);
-  margin: 24px 0;
+  background: linear-gradient(to right, var(--gold), transparent);
+  margin: 28px 0 40px;
+}
+
+/* =====================
+   BLOCK
+===================== */
+.about-block {
+  margin-bottom: 40px;
+}
+
+.about-block h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 12px;
 }
 
 .about-right p {
-  color: var(--gray);
-  line-height: 1.8;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  font-size: 15.5px;
+  max-width: 520px;
 }
 
-/* 🔥 MOBILE FIX */
+/* =====================
+   VALUES (🔥 UPGRADE)
+===================== */
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px 40px;
+  margin-top: 20px;
+}
+
+.value-item span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.value-item p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.7;
+}
+
+/* subtle hover (optional premium feel) */
+.value-item {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.value-item:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+}
+
+/* =====================
+   MOBILE
+===================== */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 60px;
     text-align: center;
   }
 
@@ -55,5 +144,13 @@
     font-size: 160px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .about-right p {
+    margin: 0 auto;
+  }
+
+  .about-values {
+    grid-template-columns: 1fr;
   }
 }
