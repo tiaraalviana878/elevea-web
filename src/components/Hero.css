@@ -4,9 +4,13 @@
   align-items: center;
   position: relative;
   padding-left: 60px;
+
+  /* 🔥 penting biar gambar bisa digeser */
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* OVERLAY NAVY */
+/* OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
@@ -20,24 +24,20 @@
   );
 
   z-index: 1;
-  pointer-events: none;
 }
 
-/* BIG LETTER E */
+/* BIG E */
 .hero::after {
   content: "E";
   position: absolute;
 
   font-family: 'Playfair Display', serif;
   font-size: 420px;
-  font-weight: 600;
 
   right: 8%;
   bottom: -40px;
 
   color: rgba(255, 255, 255, 0.05);
-
-  z-index: 1;
 }
 
 /* CONTENT */
@@ -69,6 +69,8 @@
 /* BUTTON */
 .hero-buttons {
   margin-top: 40px;
+  display: flex;
+  gap: 12px;
 }
 
 .btn {
@@ -82,19 +84,17 @@
 }
 
 .btn-outline {
-  margin-left: 14px;
   background: transparent;
   border: 1px solid var(--gold);
   color: var(--gold);
 }
 
-/* RESPONSIVE */
+/* 🔥 MOBILE FIX (INI YANG NGEBENERIN HP) */
 @media (max-width: 900px) {
   .hero {
-    padding-left: 20px;
     height: auto;
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding: 120px 20px 80px;
+    background-position: 75% center;
   }
 
   .hero-content {
@@ -103,11 +103,23 @@
   }
 
   .hero h1 {
-    font-size: 42px;
+    font-size: 38px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
   }
 
   .hero::after {
-    font-size: 200px;
+    font-size: 180px;
     right: 0;
     bottom: 0;
   }

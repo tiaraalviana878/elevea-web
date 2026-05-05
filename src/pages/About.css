@@ -1,84 +1,33 @@
-/* =====================
-   SECTION
-===================== */
 .about {
-  position: relative;
-  overflow: hidden;
   padding: 140px 0;
   background: #0b1220;
 }
 
-/* =====================
-   GRID
-===================== */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 100px;
   align-items: center;
-  position: relative;
-  z-index: 2;
 }
 
-/* =====================
-   LEFT VISUAL
-===================== */
+/* LEFT VISUAL */
 .about-left {
   position: relative;
   height: 400px;
 }
 
-/* BIG LETTER */
 .about-left::before {
   content: "E";
   position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  font-family: 'Playfair Display', serif;
   font-size: 300px;
-  font-weight: 600;
-
   color: rgba(255,255,255,0.04);
 }
 
-/* GLOW */
-.about-left::after {
-  content: "";
-  position: absolute;
-  left: -20%;
-  top: 0;
-  width: 120%;
-  height: 100%;
-
-  background: radial-gradient(
-    circle at left,
-    rgba(201,164,92,0.15),
-    transparent 70%
-  );
-}
-
-/* =====================
-   RIGHT
-===================== */
-.about-label {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: var(--gray);
-  margin-bottom: 10px;
-}
-
+/* RIGHT */
 .about-title {
   font-size: 44px;
-  line-height: 1.2;
 }
 
-.about-title span {
-  color: var(--gold);
-}
-
-/* LINE */
 .about-line {
   width: 60px;
   height: 2px;
@@ -86,56 +35,12 @@
   margin: 24px 0;
 }
 
-/* TEXT */
 .about-right p {
   color: var(--gray);
   line-height: 1.8;
-  margin-bottom: 16px;
 }
 
-/* POINTS */
-.about-points {
-  margin-top: 24px;
-}
-
-.about-points div {
-  margin-bottom: 10px;
-  position: relative;
-  padding-left: 18px;
-}
-
-.about-points div::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 8px;
-  width: 6px;
-  height: 6px;
-  background: var(--gold);
-  border-radius: 50%;
-}
-
-/* =====================
-   ANIMATION
-===================== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.delay-1 {
-  transition-delay: 0.2s;
-}
-
-/* =====================
-   RESPONSIVE
-===================== */
+/* 🔥 MOBILE FIX */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
@@ -149,6 +54,6 @@
   .about-left::before {
     font-size: 160px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
   }
 }

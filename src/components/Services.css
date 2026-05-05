@@ -17,6 +17,11 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* CARD */
 .service-card {

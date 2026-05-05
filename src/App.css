@@ -127,6 +127,11 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 }
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =====================
    CARD
@@ -334,4 +339,39 @@ a {
   .nav-logo {
     height: 60px;
   }
+}
+/* ===== MOBILE FIX GLOBAL ===== */
+@media (max-width: 900px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .about-grid,
+  .impact-grid,
+  .insight-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .trust-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
 }
